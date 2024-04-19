@@ -5,16 +5,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0; /* Remove default body margin */
   padding: 0; /* Remove default body padding */
+  display: flex;
 }
 
 .sidebar {
   width: 200px;
   background-color: #333;
   padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
 }
 
 .sidebar a {
@@ -30,13 +27,20 @@ body {
 }
 
 .content {
-  margin-left: 220px; /* Adjust content margin to make space for the sidebar */
+  flex-grow: 1;
+  padding: 20px;
 }
 
+/* src/components/NoteList.css */
 .note-list-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row; /* Display items horizontally */
   gap: 20px;
+}
+
+.notes-row {
+  display: flex;
+  flex-direction: row; /* Display notes horizontally */
 }
 
 .note-box {
@@ -45,33 +49,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   flex: 1 0 200px; /* Flexible box sizing */
-}
-
-.note-box h3 {
-  margin-top: 0;
-}
-
-.note-box p {
-  margin-bottom: 10px;
-}
-
-.note-box button {
-  margin-right: 10px;
-}
-
-/* src/components/NoteList.css */
-.note-list-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(25% - 20px), 1fr)); /* Four columns with minimum width */
-  grid-gap: 20px; /* Gap between grid items */
-  padding: 20px; /* Add padding to the container to create space between the edges */
-}
-
-.note-box {
-  background-color: #111;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Set maximum width for each note */
+  /* Optionally add margin or padding if needed */
 }
 
 .note-box h3 {

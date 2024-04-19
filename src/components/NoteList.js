@@ -15,32 +15,39 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
       {pinnedNotes.length > 0 && (
         <div className="pinned-notes">
           <h2>Pinned Notes</h2>
-          {pinnedNotes.map(note => (
-            <div key={note.id} className="note-box">
-              <h3>{note.title}</h3>
-              <p>{note.content}</p>
-              <div>
-                <button onClick={() => deleteNote(note.id)}>Delete</button>
-                <button onClick={() => pinNote(note.id)}>Unpin</button>
+          <div className="notes-row">
+            {pinnedNotes.map(note => (
+              <div key={note.id} className="note-box">
+                <h3>{note.title}</h3>
+                <p>{note.content}</p>
+                <div>
+                  <button onClick={() => deleteNote(note.id)}>Delete</button>
+                  <button onClick={() => pinNote(note.id)}>Unpin</button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
 
       {/* Unpinned Notes Section */}
-      <div className="unpinned-notes">
-        {unpinnedNotes.map(note => (
-          <div key={note.id} className="note-box">
-            <h3>{note.title}</h3>
-            <p>{note.content}</p>
-            <div>
-              <button onClick={() => deleteNote(note.id)}>Delete</button>
-              <button onClick={() => pinNote(note.id)}>Pin</button>
-            </div>
+      {unpinnedNotes.length > 0 && (
+        <div className="unpinned-notes">
+          <h2>Unpinned Notes</h2>
+          <div className="notes-row">
+            {unpinnedNotes.map(note => (
+              <div key={note.id} className="note-box">
+                <h3>{note.title}</h3>
+                <p>{note.content}</p>
+                <div>
+                  <button onClick={() => deleteNote(note.id)}>Delete</button>
+                  <button onClick={() => pinNote(note.id)}>Pin</button>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
