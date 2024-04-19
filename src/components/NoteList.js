@@ -13,7 +13,7 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
     <div className="note-list-container">
       {/* Pinned Notes Section */}
       {pinnedNotes.length > 0 && (
-        <div className="pinned-notes">
+        <div className="section-container">
           <h2>Pinned Notes</h2>
           <div className="notes-row">
             {pinnedNotes.map(note => (
@@ -32,7 +32,7 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
 
       {/* Unpinned Notes Section */}
       {unpinnedNotes.length > 0 && (
-        <div className="unpinned-notes">
+        <div className="section-container">
           <h2>Unpinned Notes</h2>
           <div className="notes-row">
             {unpinnedNotes.map(note => (

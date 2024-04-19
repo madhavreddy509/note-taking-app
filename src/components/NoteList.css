@@ -34,13 +34,19 @@ body {
 /* src/components/NoteList.css */
 .note-list-container {
   display: flex;
-  flex-direction: row; /* Display items horizontally */
+  flex-direction: column;
   gap: 20px;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .notes-row {
   display: flex;
-  flex-direction: row; /* Display notes horizontally */
+  flex-wrap: wrap; /* Allow notes to wrap to new row when space is filled */
+  gap: 20px;
 }
 
 .note-box {
@@ -48,9 +54,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 1 0 200px; /* Flexible box sizing */
-  max-width: 300px; /* Set maximum width for each note */
-  /* Optionally add margin or padding if needed */
+  flex: 0 0 auto;
+  min-width: 300px;
 }
 
 .note-box h3 {
