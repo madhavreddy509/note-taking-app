@@ -1,0 +1,27 @@
+/* src/components/NoteList.css */
+.note-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .note-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 0 200px; /* Flexible box sizing */
+  }
+  
+  .note-box h3 {
+    margin-top: 0;
+  }
+  
+  .note-box p {
+    margin-bottom: 10px;
+  }
+  
+  .note-box button {
+    margin-right: 10px;
+  }
+  
