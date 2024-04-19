@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addNote } from '../actions/noteActions';
-import './NoteForm.css'; // Import CSS file for styling
+import './NoteForm.css'; 
 
 const NoteForm = ({ addNote }) => {
   const [title, setTitle] = useState('');

@@ -1,10 +1,10 @@
-/* src/components/NoteList.css */
+
 body {
   background-color: #000;
   color: #fff;
   font-family: Arial, sans-serif;
-  margin: 0; /* Remove default body margin */
-  padding: 0; /* Remove default body padding */
+  margin: 0; 
+  padding: 0; 
   display: flex;
 }
 
@@ -31,7 +31,7 @@ body {
   padding: 20px;
 }
 
-/* src/components/NoteList.css */
+
 .note-list-container {
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ body {
 
 .notes-row {
   display: flex;
-  flex-wrap: wrap; /* Allow notes to wrap to new row when space is filled */
+  flex-wrap: wrap; 
   gap: 20px;
 }
 
@@ -54,16 +54,22 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  flex: 0 0 auto;
-  min-width: 300px;
+  border: 2px solid white; 
+  width: 250px; 
+  min-height: 100px; 
 }
 
 .note-box h3 {
   margin-top: 0;
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
 }
 
 .note-box p {
   margin-bottom: 10px;
+  overflow: hidden; 
+  word-wrap: break-word; 
 }
 
 .note-box button {

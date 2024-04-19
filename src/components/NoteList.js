@@ -1,11 +1,11 @@
-// src/components/NoteList.js
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteNote, pinNote } from '../actions/noteActions';
-import './NoteList.css'; // Import CSS file for styling
+import './NoteList.css'; 
 
 const NoteList = ({ notes, deleteNote, pinNote }) => {
-  // Separate pinned and unpinned notes
+  
   const pinnedNotes = notes.filter(note => note.pinned);
   const unpinnedNotes = notes.filter(note => !note.pinned);
 
@@ -33,7 +33,7 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
       {/* Unpinned Notes Section */}
       {unpinnedNotes.length > 0 && (
         <div className="section-container">
-          <h2>Unpinned Notes</h2>
+          
           <div className="notes-row">
             {unpinnedNotes.map(note => (
               <div key={note.id} className="note-box">
