@@ -21,8 +21,8 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
                 <h3>{note.title}</h3>
                 <p>{note.content}</p>
                 <div>
-                  <button onClick={() => deleteNote(note.id)}>Delete</button>
-                  <button onClick={() => pinNote(note.id)}>Unpin</button>
+                  <button onClick={() => deleteNote(note.id)} className="icon-button"><span className="icon delete-icon">&#128465;</span> </button>
+                  <button onClick={() => pinNote(note.id)} className="icon-button"><span className="icon">&#128204;</span></button>
                 </div>
               </div>
             ))}
@@ -33,15 +33,15 @@ const NoteList = ({ notes, deleteNote, pinNote }) => {
       {/* Unpinned Notes Section */}
       {unpinnedNotes.length > 0 && (
         <div className="section-container">
-          
+          <h2> Notes</h2>
           <div className="notes-row">
             {unpinnedNotes.map(note => (
               <div key={note.id} className="note-box">
                 <h3>{note.title}</h3>
                 <p>{note.content}</p>
                 <div>
-                  <button onClick={() => deleteNote(note.id)}>Delete</button>
-                  <button onClick={() => pinNote(note.id)}>Pin</button>
+                  <button onClick={() => deleteNote(note.id)} className="icon-button"><span className="icon delete-icon">&#128465;</span> </button>
+                  <button onClick={() => pinNote(note.id)} className="icon-button"><span className="icon">&#128204;</span></button>
                 </div>
               </div>
             ))}
