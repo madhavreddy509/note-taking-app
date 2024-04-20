@@ -3,6 +3,7 @@ import React from "react";
 const Sidebar=()=>{
 
     return(<div className="sidebar">
+    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
     <a href="#" className="active">
       <span role="img" aria-label="Notes">&#128220;</span> Notes
     </a>
